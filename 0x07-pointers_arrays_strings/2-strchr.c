@@ -1,27 +1,22 @@
-/*                                                                                                                                   
- * File: 2-strchr.c                                                                                                                  
- * Auth: learner sam                                                                                                                 
- */                                                                                                                                  
-                                                                                                                                     
-#include "main.h"                                                                                                                    
-                                                                                                                                     
-/**                                                                                                                                  
- * _strchr - Locates a character in a string.                                                                                        
- * @s: The string to be searched.                                                                                                    
- * @c: The character to be located.                                                                                                  
- *                                                                                                                                   
- * Return: If c is found - a pointer to the first occurence.                                                                         
- *         If c is not found - NULL.                                                                                                 
- */                                                                                                                                  
-char *_strchr(char *s, char c)                                                                                                       
-{                                                                                                                                    
-        int index;                                                                                                                   
-                                                                                                                                     
-        for (index = 0; s[index] >= '\0'; index++)                                                                                   
-        {                                                                                                                            
-                if (s[index] == c)                                                                                                   
-                        return (s + index);                                                                                          
-        }                                                                                                                            
-                                                                                                                                     
-        return ('\0');                                                                                                               
+#include "main.h"
+
+/**
+ * _strchr - locates a character in a string
+ * @s: string to check
+ * @c: character to check for
+ *
+ * Return: pointer to spot in s with c or null
+ */
+char *_strchr(char *s, char c)
+{
+	int i;
+
+	for (i = 0; *(s + i); i++)
+	{
+		if (*(s + i) == c)
+			return (s + i);
+	}
+	if (*(s + i) == c)
+		return (s + i);
+	return (0);
 }
